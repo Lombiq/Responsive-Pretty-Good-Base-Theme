@@ -1,0 +1,277 @@
+﻿/*
+ Media Queries
+***************************************************************/
+
+/* MOBILE PORTRAIT */
+@media only screen and (min-width: 320px) {
+body {
+		
+}
+} /* end media query */
+
+
+
+
+/* MOBILE LANDSCAPE */
+@media only screen and (min-width: 480px) {
+body {
+		
+}
+
+/* Structure*/
+#branding {
+    font-size: 2em;
+    transition:all .2s linear; 
+    -o-transition:all .2s linear; 
+    -moz-transition:all .2s linear; 
+    -webkit-transition:all .2s linear;
+}
+
+/* Float Images */
+p img.left, 
+p img[align="left"]     { float: left; margin: 0.923em 0.923em 0.923em 0; }
+p img.right, 
+p img[align="right"]    { float: right; margin: 0.923em 0 0.923em 0.923em; }
+
+} /* end media query */
+
+
+
+
+/* SMALL TABLET */
+@media only screen and (min-width: 600px) {
+body 
+{
+		
+}
+
+/* Branding */
+#branding {
+    font-size: 2.9em;
+    transition:all .2s linear; 
+    -o-transition:all .2s linear; 
+    -moz-transition:all .2s linear; 
+    -webkit-transition:all .2s linear;
+}
+
+/* Navigation */
+#nav-collapsed {
+    width: 65px;
+    margin-top: -1em;
+    padding: 1.9em;
+}
+#nav-collapsed.is-active { padding-bottom: 3em; color: #666; }
+#nav-collapsed span.responsive-menu-text {
+    display: inline-block;
+    padding-left: .5em;
+    vertical-align: middle;
+}
+
+/* Forms */
+select, textarea, input.text, input.textMedium, input.text-small, input.text-box { max-width: 65%;}
+
+} /* end media query */
+
+
+
+
+/* TABLET/NETBOOK (iPad and most Android Tablets in portrait) */
+@media only screen and (min-width: 768px) { 
+body {
+}
+
+/* Structure
+***************************************************************/
+
+/* Navigation */
+#layout-navigation { margin-top: 0; }
+.lt-ie8 #layout-navigation { margin-top: 2em; }
+nav ul li { background:#f6f6f6; margin: 0 2px -1px 0; }
+nav li.last { margin-right: 0; } 
+nav ul li a { padding:0 18px; }
+nav > ul li.current { border-bottom: 1px solid #fff; } 
+nav > ul li.dropdown:hover { background: #eee; } 
+nav > ul li.dropdown li.dropdown:hover { background: #eee; } 
+ 
+/* first level */
+nav > ul > li { float:left; }
+nav > ul > li > a { float:left; } 
+    
+/* second level */
+nav > ul > li > ul { margin: 24px 0px 0px -1px; position:absolute; width: auto; }
+.lt-ie8 nav > ul > li > ul { margin-left: -6.9em; }
+nav > ul > li > ul > li > a { padding:0 18px; }
+nav > ul > li > ul > li > a:before { content: ""; }
+
+/* third level */
+nav > ul > li > ul > li > ul { margin: -20px -1px 0px 90% ; position:absolute; width: auto;}
+nav > ul > li > ul > li > ul > li > a { padding:0 18px; }
+nav > ul > li > ul > li > ul > li > a:before { content: ""; }
+
+/* Hide duplicated navigation in footer
+** Only needed if set in ResponsiveChanges.js */
+.footer-menu { display: none!important; } 
+
+
+/* Zones
+***************************************************************/
+.zone-navigation { margin-left: 1em; padding: 0; border-bottom: 1px solid #DBDBDB; }
+
+/* Secondary Zones */
+
+/* Aside Zones */
+/* If zone 1 is on */
+.aside-1 #layout-content { float: right; width: 62.5%; }
+.aside-1 .aside-first { float: left; width: 37.5%; }
+
+/* If zone 2 is on */
+.aside-2 #layout-content { float: left; width: 62.5%; }
+.aside-2 .aside-second { float: right; width: 37.5%; }
+
+/* If zones 1, 2 are on */
+.aside-12 #layout-content { width: 62.5%; }
+.aside-12 .aside-first, .aside-12 .aside-second { width: 18.75%; }
+.aside-12 .aside-first, .aside-12 .aside-second, .aside-12 #layout-content { float:left; }
+
+/* Tripel Zones*/
+#layout-tripel > div { float:left; width: auto; }
+
+/*2 zones on */
+.tripel-12 #layout-tripel > div { width:50%; } /* If zones 1, 2 are on */
+.tripel-23 #layout-tripel > div { width:50%; } /* If zones 2, 3 are on */
+.tripel-13 #layout-tripel > div { width:50%; } /* If zones 1, 3 are on */
+
+/*3 zones on */
+.tripel-123 #layout-tripel > div { width:33.33333333333333%; } /* If zones 1, 2, 3 are on */
+
+/* Quad Footer Zones */
+#footer-quad > div { float:left; width:25%; }
+
+/*1 zone on */
+.split-1 #footer-quad-first { width:auto; } /* If zone 1 is on */
+.split-2 #footer-quad-second { width:auto; } /* If zone 2 is on */
+.split-3 #footer-quad-third { width:auto; } /* If zone 3 is on */
+.split-4 #footer-quad-fourth { width:auto; } /* If zone 4 is on */
+
+/*2 zones on */
+.split-12 #footer-quad-first, .split-12 #footer-quad-second { width:50%; } /* If zones 1, 2 are on */
+.split-13 #footer-quad-first, .split-13 #footer-quad-third { width:50%; } /* If zones 1, 3 are on */
+.split-14 #footer-quad-first, .split-14 #footer-quad-fourth { width:50%; } /* If zones 1, 4 are on */
+.split-23 #footer-quad-second, .split-23 #footer-quad-third { width:50%; } /* If zones 2, 3 are on */
+.split-24 #footer-quad-second, .split-24 #footer-quad-fourth { width:50%; } /* If zones 2, 4 are on */
+.split-34 #footer-quad-third, .split-34 #footer-quad-fourth { width:50%; } /* If zones 3, 4 are on */
+
+/*3 zones on */
+.split-234 #footer-quad-second { width:50%; } /* If zones 2, 3, 4 are on */
+.split-134 #footer-quad-first { width:50%; } /* If zones 1, 3, 4 are on */
+.split-124 #footer-quad-fourth { width:50%; } /* If zones 1, 2, 4 are on */
+.split-123 #footer-quad-third { width:50%; } /* If zones 1, 2, 3 are on */
+
+/*3 zones on - alternate layout*/
+/*.split-123 #footer-quad-first, .split-123 #footer-quad-second, .split-123 #footer-quad-third { width:33.33333333333333%; }*/ /* If zones 1, 2, 3 are on */
+/*.split-124 #footer-quad-first, .split-124 #footer-quad-second, .split-124 #footer-quad-fourth { width:33.33333333333333%; }*/ /* If zones 1, 2, 4 are on */
+/*.split-134 #footer-quad-first, .split-134 #footer-quad-third, .split-134 #footer-quad-fourth { width:33.33333333333333%; }*/ /* If zones 1, 3, 4 are on */
+/*.split-234 #footer-quad-second, .split-234 #footer-quad-third, .split-234 #footer-quad-fourth { width:33.33333333333333%; }*/ /* If zones 2, 3, 4 are on */
+	
+/*
+GRID LAYOUT BEGINS HERE FOR USE 
+WITHIN HTML WIDGET AREAS AND EDITOR IF ADDITIONAL COLUMNS/ROWS ARE
+DESIRED
+***************************************************************/
+/* This is using the 1140 Grid System: http://cssgrid.net/ */
+.row {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.row:after {
+	content: ".";
+	display: block;
+	width: 100%;
+	height: 0;
+	visibility: hidden;
+}
+.onecol    { width: 4.85%;  } /* grid_1  */
+.twocol    { width: 13.45%; } /* grid_2  */
+.threecol  { width: 22.05%; } /* grid_3  */ 
+.fourcol   { width: 30.75%; } /* grid_4  */
+.fivecol   { width: 39.45%; } /* grid_5  */
+.sixcol    { width: 48%;    } /* grid_6  */
+.sevencol  { width: 56.75%; } /* grid_7  */
+.eightcol  { width: 65.4%;  } /* grid_8  */
+.ninecol   { width: 74.05%; } /* grid_9  */
+.tencol    { width: 82.7%;  } /* grid_10 */
+.elevencol { width: 91.35%; } /* grid_11 */
+.twelvecol { width: 100%;   } /* grid_12 */
+	
+/* layout & column defaults */
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol { 
+	float: left; 
+	position: relative;
+	margin-right: 3.8%; 
+}
+	
+/* adding float to large column */
+.twelvecol {
+	float: left;
+	position: relative;
+}
+	
+/* default styles & fixes */
+.col-last { 
+	margin-right: 0; 
+	float: right;
+}
+
+} /* end media query */
+
+
+
+
+/* LANDSCAPE TABLET/NETBOOK/LAPTOP */
+@media only screen and (min-width: 1024px) { 
+.layout-content {
+	max-width: 1160px;
+}
+} /* end media query */
+
+
+
+
+@media only screen and (min-width: 1280px) { 
+/* DESKTOP */
+body {
+
+}
+} /* end media query */
+
+
+
+
+/* WIDESCREEN */
+@media only screen and (min-width: 1400px) { 
+body { font-size: 100%; } /* Increased legibility on large screens */
+#layout-header, #layout-navigation,  #layout-featured, #layout-before-main, #layout-main, #layout-footer, #layout-after-main, #layout-tripel {
+max-width: 1400px;
+}
+
+} /* end media query */
+
+
+
+
+/* PRINT */
+@media print {
+* {background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)" !important} /* Black prints faster */
+a, a:visited {color: #444 !important; text-decoration: underline}
+a[href]:after {content: " (" attr(href) ")"}
+abbr[title]:after {content: " (" attr(title) ")"}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {content: ""}  /* Don't print links for images, javascript or internal links */
+pre, blockquote {border: 1px solid #999; page-break-inside: avoid; }
+thead {display: table-header-group; } /* Repeat header row at top of each printed page */
+tr, img {page-break-inside: avoid; }
+img {max-width: 100% !important; }
+@page {margin: 0.5cm}
+p, h2, h3 {orphans: 3; widows: 3}
+h2, h3{page-break-after: avoid}
+}

@@ -1,0 +1,26 @@
+﻿@{
+    /* Initialization
+    ***************************************************************/
+
+    string title = Convert.ToString(Model.Title);
+    string siteName = Convert.ToString(WorkContext.CurrentSite.SiteName);
+    var classForPage = Html.ClassForPage();
+    
+    Display.Resources();
+}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="@WorkContext.CurrentCulture" class="no-js lt-ie9 lt-ie8 lt-ie7 static @classForPage"> <![endif]-->
+<!--[if IE 7]>         <html lang="@WorkContext.CurrentCulture" class="no-js lt-ie9 lt-ie8 static @classForPage"> <![endif]-->
+<!--[if IE 8]>         <html lang="@WorkContext.CurrentCulture" class="no-js lt-ie9 static @classForPage"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="@WorkContext.CurrentCulture" class="no-js static @classForPage"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <title>@Html.Title(title, siteName)</title>
+    @Display(Model.Head)
+    <script>        (function (d) { d.className = "dyn" + d.className.substring(6, d.className.length); })(document.documentElement);</script>
+</head>
+<body>
+    @Display(Model.Body)
+    @Display(Model.Tail)
+</body>
+</html>
