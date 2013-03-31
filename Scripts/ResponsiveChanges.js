@@ -4,7 +4,7 @@
 // Place first aside below #layout-content on mobile/small tablets
 
 $(function () {
-    var borderWidth = 767;
+    var widthBorder = 767;
 
     // Function to collapse main navigation and create dropdown with icon
     function responsiveNavigation() {
@@ -28,7 +28,7 @@ $(function () {
     };
 
     /* Append/remove responsive navigation based on breakpoints when document loads */
-    if ($(window).width() <= borderWidth) {
+    if ($(window).width() <= widthBorder) {
         responsiveNavigation();
     } else {
         $('#nav-collapsed').remove();
@@ -37,9 +37,9 @@ $(function () {
 
     /* Append/remove responsive navigation based on breakpoints on resize event */
     $(window).resize(function () {
-        if ($(window).width() <= borderWidth && $('#nav-collapsed').length != 1) {
+        if ($(window).width() <= widthBorder && $('#nav-collapsed').length != 1) {
             responsiveNavigation();
-        } else if ($(window).width() > borderWidth) {
+        } else if ($(window).width() > widthBorder) {
             $('#nav-collapsed').remove();
             $('#layout-navigation').show();
         };
@@ -54,11 +54,11 @@ $(function () {
     $('#layout-navigation').clone().insertBefore('#footer-sig').addClass('footer-menu');
 
     /* Place first aside below layout-content on mobile browsers (aside's are generally less important than main content so this might make sense) */
-    if ($(window).width() <= borderWidth && $('#aside-first').length == 1) {
+    if ($(window).width() <= widthBorder && $('#aside-first').length == 1) {
         $('#aside-first').insertAfter('#layout-content');
     }
     $(window).resize(function () {
-        if ($(window).width() <= borderWidth && $('#aside-first').length == 1) {
+        if ($(window).width() <= widthBorder && $('#aside-first').length == 1) {
             $('#aside-first').insertAfter('#layout-content');
         }
         else if ($('#aside-first').length == 1) {
