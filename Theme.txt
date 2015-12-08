@@ -1,6 +1,6 @@
 Name: Responsive Pretty Good Base Theme
 Author: Piedone
-Website: https://responsivepgbt.codeplex.com
+Website: https://github.com/Lombiq/Responsive-Pretty-Good-Base-Theme
 Description: Responsive PGBT is a responsive Orchard theme that aims to provide a set of common markup and styling so other themes can easily inherit from it. The theme extends Pretty Good Base Theme with responsive properties taken from The Theme Machine Responsive theme (http://responsivetheme.codeplex.com/) so credit goes to the Planet Telex team!
 Version: 1.0
 BaseTheme: Piedone.PrettyGoodBaseTheme
